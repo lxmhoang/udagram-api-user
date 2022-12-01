@@ -15,9 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-- docker build -t udagram-api-user .
-# Tagging
-- docker tag udagram-api-user lxmhoang/udagram-api-user:v1
+  - docker build -t udagram-api-user .
+  # Tagging
+  - docker tag udagram-api-user lxmhoang/udagram-api-user:v1
 
 after_success:
 # Push
