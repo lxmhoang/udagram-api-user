@@ -18,6 +18,8 @@ script:
 - docker build -t udagram-api-user .
 # Tagging
 - docker tag udagram-api-user lxmhoang/udagram-api-user:v1
+
+after_success:
 # Push
 # Assuming DOCKER_PASSWORD and DOCKER_USERNAME are set in the Travis repository settings
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
